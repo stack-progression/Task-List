@@ -1,0 +1,58 @@
+/* /////////////////////// 
+ -------Resset code-------- 
+ /////////////////////// */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Adaugat de mine */
+h1{
+  font-family: "Poor Story", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Adaugat de mine */
+
+
+/* /////////////////////// 
+ -------    Root   -------- 
+ /////////////////////// */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #393939;
+  --gray-1: #626262;
+}
+
+/* /////////////////////// 
+ -------  Global  -------- 
+ /////////////////////// */
+
+ .root-layout{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 70px;
+ }

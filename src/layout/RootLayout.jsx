@@ -1,16 +1,14 @@
-import React from 'react'
-import Header from '../components/Header/Header'
-import Tasks from '../components/Tasks/Tasks'
+import React from "react";
+import Header from "../components/Header/Header";
+import Tasks from "../components/Tasks/Tasks";
 
 const RootLayout = () => {
   return (
-    <div>
+    <div className="root-layout">
       <Header />
-      <div>
-        <Tasks />
-      </div>
+      <Tasks />
     </div>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
