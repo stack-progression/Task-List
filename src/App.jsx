@@ -1,10 +1,17 @@
 import React from 'react'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import RootLayout from './layout/RootLayout'
 
 const App = () => {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />} />
+    )
+  )
+
   return (
-    <div>
-      
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 
