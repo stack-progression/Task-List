@@ -13,6 +13,7 @@
     background: var(--gray-1);
 }
 .header .open-add-task{
+    z-index: 2;
     font-family: "Poppins", sans-serif;
     display: flex;
     align-items: center;

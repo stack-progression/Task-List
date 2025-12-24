@@ -8,25 +8,28 @@ const Context = ({ children }) => {
   const [newText, setNewText] = useState("");
 
   useEffect(() => {
-    const saved = localStorage.getItem("tasks")
-    if(!saved) return;
+    const saved = localStorage.getItem("tasks");
+    if (!saved) return;
 
     try {
       //eslint-disable-next-line react-hooks/set-state-in-effect
-      setTasks(JSON.parse(saved))
+      setTasks(JSON.parse(saved));
     } catch {
       //eslint-disable-next-line react-hooks/set-state-in-effect
-      setTasks([])
+      setTasks([]);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
-  })
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  });
 
   const AddTask = () => {
     if (task.trim() === "") return;
-    setTasks([...tasks, { id: Date.now(), text: task, checked: false}]);
+    setTasks([
+      ...tasks,
+      { id: Date.now(), text: task, checked: false, edit: false },
+    ]);
     setTask("");
   };
 
@@ -49,15 +52,14 @@ const Context = ({ children }) => {
     setTasks(tasks.map((t) => ({ ...t, checked: !everyTask })));
   };
 
-/////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////
 
   const EditTask = (id) => {
-    setTasks(tasks.map((t) => t.id === id ? {...t, text: newText} : t))
-    setNewText("")
+    setTasks(tasks.map((t) => (t.id === id ? { ...t, text: newText, edit: !t.edit } : t)));
+    setNewText("");
   };
 
-/////////////////////////////////////////////////////////////////////////////////////////
-
+  /////////////////////////////////////////////////////////////////////////////////////////
 
   const appValue = {
     EditTask,

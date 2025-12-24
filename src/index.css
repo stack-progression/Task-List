@@ -16,7 +16,15 @@ html {
   box-sizing: border-box;
 }
 
-body,h1,h2,h3,h4,h5,h6,p,ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -27,13 +35,12 @@ ul {
 }
 
 /* Adaugat de mine */
-h1{
+h1 {
   font-family: "Poor Story", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 /* Adaugat de mine */
-
 
 /* /////////////////////// 
  -------    Root   -------- 
@@ -44,15 +51,49 @@ h1{
   --white: #ffffff;
   --gray: #393939;
   --gray-1: #626262;
+  --gray-2: #e9ecef
 }
 
 /* /////////////////////// 
  -------  Global  -------- 
  /////////////////////// */
 
- .root-layout{
+.root-layout {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 70px;
- }
+}
+.root-layout-add-task {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.root-layout-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .root-layout-container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1300px) {
+  .root-layout-container {
+    padding: 0 70px;
+    width: 70%;
+  }
+  .root-layout-add-task {
+    width: 30%;
+  }
+  .root-layout {
+    flex-direction: row-reverse;
+  }
+}
+
+.checked{
+  text-decoration: line-through;
+  color: var(--gray-1);
+}

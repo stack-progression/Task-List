@@ -1,0 +1,18 @@
+.tasks{
+    margin: 25px 0;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .tasks{
+    gap: 20px;
+}
+}
+@media (min-width: 1300px) {
+    .tasks{
+    margin: 50px 0;
+    gap: 25px;
+}
+}

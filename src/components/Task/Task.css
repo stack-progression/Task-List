@@ -1,0 +1,135 @@
+/* Phone version */
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--gray-2);
+    padding: 5px;
+    border-radius: 5px;
+    gap: 10px;
+    min-height: 33px;
+}
+.task p{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+.text-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.task input{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    width: 55vw;
+    border: 1px solid;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 23px;
+    max-width: 23px;
+    min-height: 23px;
+    min-height: 23px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.check-task{
+    border-radius: 4px;
+    border: 2px solid var(--black);
+    background: var(--white);
+    font-size: 15px;
+}
+.task-buttons{
+    display: flex;
+}
+.edit-task{
+    font-size: 18px;
+}
+.set-edit{
+    font-size: 16px;
+}
+.delete-task{
+    font-size: 15px;
+}
+/* Phone version */
+/* Tablet version */
+@media (min-width: 768px) {
+    .task{
+    padding: 11px;
+    gap: 20px;
+    min-height: 50px;
+}
+.task p{
+    font-size: 20px;
+}
+.task input{
+    font-size: 20px;
+    width: 65vw;
+    padding: 5px 10px;
+}
+.btn{
+    min-width: 28px;
+    max-width: 28px;
+    min-height: 28px;
+    min-height: 28px;
+}
+.check-task{
+    font-size: 18px;
+}
+
+.edit-task{
+    font-size: 22px;
+}
+.set-edit{
+    font-size: 20px;
+}
+.delete-task{
+    font-size: 19px;
+}
+}
+/* Tablet version */
+/* Desktop version */
+@media (min-width: 1300px) {
+    .task{
+    padding: 15px 20px;
+    gap: 30px;
+    min-height: 60px;
+}
+.task p{
+    font-size: 32px;
+}
+.task input{
+    font-size: 28px;
+    width: 45vw;
+    padding: 5px 25px;
+}
+.btn{
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-height: 32px;
+}
+.check-task{
+    font-size: 18px;
+}
+.edit-task{
+    font-size: 28px;
+}
+.set-edit{
+    font-size: 26px;
+}
+.delete-task{
+    font-size: 22px;
+}
+}
+/* Desktop version */
